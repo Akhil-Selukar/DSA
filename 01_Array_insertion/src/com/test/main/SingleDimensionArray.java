@@ -13,16 +13,14 @@ public class SingleDimensionArray {
 	
 	public void insert(int location, int valueToInsert) {
 		try {
-			if(arr[location] == Integer.MIN_VALUE) {					// O(1)
-				arr[location] = valueToInsert;							// O(1)
-				System.out.println("successfully inserted.");			// O(1)
+			if(arr[location] == Integer.MIN_VALUE) {
+				arr[location] = valueToInsert;
+				System.out.println("successfully inserted.");
 			} else {
-				System.out.println("This index is already occupied.");	// O(1)
+				System.out.println("This index is already occupied.");
 			}
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("Invalid index..!!");					// O(1)
+			System.out.println("Invalid index..!!");
 		}
 	}
-	
-	// As all the steps has time complexity of O(1) hence the time complexity of this code will be O(1)
 }
