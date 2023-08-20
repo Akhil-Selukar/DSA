@@ -21,6 +21,10 @@ public class Main {
 		
 		System.out.println("-------Array Traversal--------");
 		sda.traverseArray();
+		
+		System.out.println("\n-------Array Search--------");
+		sda.searchInArray(18);
+		sda.searchInArray(25);
 	}
 
 }

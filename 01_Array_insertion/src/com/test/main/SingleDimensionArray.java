@@ -28,14 +28,24 @@ public class SingleDimensionArray {
 	// Array traversal
 	public void traverseArray() {
 		try {
-			for(int i=0; i<arr.length; i++) {				// O(n)
-				System.out.print(arr[i]+" ");				// O(1)
+			for(int i=0; i<arr.length; i++) {
+				System.out.print(arr[i]+" ");
 			}
 		}catch(Exception e){
-			System.out.println("Array no longer exists.!");	// O(1)
+			System.out.println("Array no longer exists.!");
 		}
 	}
-	// From above time complexities we can see that the overall time complexity of array traversal is O(N)
-	// As no additional memory is required to perform this operation and nothing is being stored in 
-	// cache so the space complexity for array traversal is O(1)
+	
+	// Array search
+	public void searchInArray(int valueToSearch) {
+		for(int i=0; i<arr.length; i++) {									// O(N)
+			if(arr[i] == valueToSearch) {									// O(1)
+				System.out.println("Value is found at the index of "+i);	// O(1)
+				return;
+			}
+		}
+		System.out.println(valueToSearch+" is not found.!");				// O(1)
+	}
+	// Time complexity for array search is O(N)
+	// Space complexity for above code is O(1) as no extra memory is required to perform this peration.
 }
