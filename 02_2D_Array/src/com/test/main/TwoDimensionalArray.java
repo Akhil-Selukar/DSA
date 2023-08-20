@@ -17,18 +17,28 @@ public class TwoDimensionalArray {
 	// Insert value at given index.
 	public  void insertValueInArray(int rowIndex, int colIndex, int value) {
 		try {
-			if(arr[rowIndex][colIndex] == Integer.MIN_VALUE) {					// O(1)
-				arr[rowIndex][colIndex] = value;								// O(1)
-				System.out.println("Value is successfully inserted..!!");		// O(1)
+			if(arr[rowIndex][colIndex] == Integer.MIN_VALUE) {
+				arr[rowIndex][colIndex] = value;
+				System.out.println("Value is successfully inserted..!!");
 			} else {
-				System.out.println("The cell is already occupied..!!");			// O(1)
+				System.out.println("The cell is already occupied..!!");
 			}
 		}catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("This index is not valid");						// O(1)
+			System.out.println("This index is not valid");
 		}
 	}
 	
-	// As we can see in above code to insert value at given index the time complexity is O(1)
-	// As no additional save operations are being performed hence the space complexity is also O(1)
-
+	
+	// Access element at given index
+	public void accessValueAtGivenIndex(int rowIndex, int colIndex) {
+		System.out.println("Acccessing row "+rowIndex+" and column "+colIndex);		// O(1)
+		try {
+			System.out.println("cell value is = "+arr[rowIndex][colIndex]);			// O(1)
+		}catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("This index is not valid");							// O(1)
+		}
+	}
+	
+	// here we can clearly see that the time complexity is O(1) and as now additional 
+	// memory is involved the space complexity will also be O(1)
 }

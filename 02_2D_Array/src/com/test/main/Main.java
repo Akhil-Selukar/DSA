@@ -1,7 +1,5 @@
 package com.test.main;
 
-import java.util.Arrays;
-
 public class Main {
 	public static void main(String args[]) {
 	
@@ -11,6 +9,9 @@ public class Main {
 		tda.insertValueInArray(0, 0, 30);
 		tda.insertValueInArray(1, 4, 40);
 		
-		System.out.println(Arrays.deepToString(tda.arr));
+//		System.out.println(Arrays.deepToString(tda.arr));
+		
+		System.out.println("---------Access value at given index----------");
+		tda.accessValueAtGivenIndex(0, 1);
 	}
 }
