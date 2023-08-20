@@ -25,6 +25,11 @@ public class Main {
 		System.out.println("\n-------Array Search--------");
 		sda.searchInArray(18);
 		sda.searchInArray(25);
+		
+		System.out.println("-------Array Search--------");
+		sda.deleteValue(2);
+		sda.deleteValue(16);
+		
 	}
 
 }
