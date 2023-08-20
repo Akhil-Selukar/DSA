@@ -11,6 +11,7 @@ public class SingleDimensionArray {
 		}
 	}
 	
+	// Array insertion
 	public void insert(int location, int valueToInsert) {
 		try {
 			if(arr[location] == Integer.MIN_VALUE) {
@@ -23,4 +24,18 @@ public class SingleDimensionArray {
 			System.out.println("Invalid index..!!");
 		}
 	}
+	
+	// Array traversal
+	public void traverseArray() {
+		try {
+			for(int i=0; i<arr.length; i++) {				// O(n)
+				System.out.print(arr[i]+" ");				// O(1)
+			}
+		}catch(Exception e){
+			System.out.println("Array no longer exists.!");	// O(1)
+		}
+	}
+	// From above time complexities we can see that the overall time complexity of array traversal is O(N)
+	// As no additional memory is required to perform this operation and nothing is being stored in 
+	// cache so the space complexity for array traversal is O(1)
 }
