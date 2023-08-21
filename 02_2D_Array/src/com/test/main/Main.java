@@ -17,7 +17,10 @@ public class Main {
 		System.out.println("---------Access value at given index----------");
 		tda.accessValueAtGivenIndex(0, 1);
 		
-		System.out.println("---------Array traversal----------");
-		tda.traversse2DArray();
+//		System.out.println("---------Array traversal----------");
+//		tda.traversse2DArray();
+		
+		System.out.println("---------Searching 2D array----------");
+		tda.searchValue(90);
 	}
 }

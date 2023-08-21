@@ -42,18 +42,27 @@ public class TwoDimensionalArray {
 	
 	// Array traversal
 	public void traversse2DArray() {
-		for(int row=0; row < arr.length; row++) {				// O(M) where M is number of rows
-			for(int col=0; col < arr[0].length; col++) {		// O(N) where N is number of columns
-				System.out.print(arr[row][col]+" ");			// O(1)
+		for(int row=0; row < arr.length; row++) {
+			for(int col=0; col < arr[0].length; col++) {
+				System.out.print(arr[row][col]+" ");
 			}
-			System.out.println();								// O(1)
+			System.out.println();
 		}
 	}
 	
-	// from above code we can see that in outer loop if M is the number of rows then O(M) is the time complexity for first loop
-	// if N is the number of columns in the 2D array then O(N) will be the complexity for inner loop and the code is in the form of
-	// do inner loop for each iteration/value of outer loop. Hence it will be multiplication of complexity so overall complexity for 
-	// 2D array traversal is O(MN)
-	// as we don't need any extra space during execution of the above code hence the space complexity of the above code is O(1)
 	
+	// Searching given value in 2D array (Linear search)
+	public void searchValue(int valueToSearch) {
+		for(int row=0; row < arr.length; row++) {											// O(M)
+			for(int col=0; col < arr[0].length; col++) {									// O(N)
+				if(arr[row][col] == valueToSearch) {										// O(1)
+					System.out.println("value fount at index row "+row+" column "+col);		// O(1)
+					return;
+				}
+			}
+		}
+		System.out.println("given value is not present in the array");						// O(1)
+	}
+	
+	// from above code it is very clear that the time complexity of linear search in 2D array is O(MN) and space complexity is O(1)
 }
