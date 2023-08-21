@@ -22,5 +22,10 @@ public class Main {
 		
 		System.out.println("---------Searching 2D array----------");
 		tda.searchValue(90);
+		
+		System.out.println("---------value deletion in 2D array----------");
+		tda.traversse2DArray();
+		tda.deleteArrayValue(1, 1);
+		tda.traversse2DArray();
 	}
 }

@@ -53,16 +53,27 @@ public class TwoDimensionalArray {
 	
 	// Searching given value in 2D array (Linear search)
 	public void searchValue(int valueToSearch) {
-		for(int row=0; row < arr.length; row++) {											// O(M)
-			for(int col=0; col < arr[0].length; col++) {									// O(N)
-				if(arr[row][col] == valueToSearch) {										// O(1)
-					System.out.println("value fount at index row "+row+" column "+col);		// O(1)
+		for(int row=0; row < arr.length; row++) {
+			for(int col=0; col < arr[0].length; col++) {
+				if(arr[row][col] == valueToSearch) {
+					System.out.println("value fount at index row "+row+" column "+col);
 					return;
 				}
 			}
 		}
-		System.out.println("given value is not present in the array");						// O(1)
+		System.out.println("given value is not present in the array");
 	}
 	
-	// from above code it is very clear that the time complexity of linear search in 2D array is O(MN) and space complexity is O(1)
+	
+	// Deleting value at given index
+	public void deleteArrayValue(int row, int col) {
+		try {
+			arr[row][col] = Integer.MIN_VALUE;						// O(1)
+			System.out.println("Value deleted successfully.!!");	// O(1)
+		}catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Invalud index.!!");					// O(1)
+		}
+	}
+	
+	// It is very clear that the time and space complexity for above piece of code is O(1)
 }
