@@ -11,33 +11,17 @@ public class Main {
 		numbers.add(2);
 		numbers.add(3);
 		numbers.add(4);
-		numbers.add(5);
+		numbers.add(3);
 		
-		int target = 3;
-
-//      APPROACH 1: For loop
-		for(int i=0; i<numbers.size(); i++) {
-			if(numbers.get(i) == target) {
-				System.out.println("element found");
-				break;
-			}
-		}
+		int valueToRemove = 3;
 		
-//      APPROACH 2: For-each loop
-		for(Integer num:numbers) {
-			if(num == target) {
-				System.out.println("element found");
-				break;
-			}
-		}
+		numbers.remove(valueToRemove);					// remove(index) -> passing the index. here the value at index 3 will be removed.
+		System.out.println(numbers);
 		
-//      APPROACH 2: indexOf()
-		int index = numbers.indexOf(target);			// will return index of the element if found otherwise will return -1.
-		if(index >= 0)
-			System.out.println("element found");
+		numbers.remove((Integer)valueToRemove);			// remove(object) -> passing the object (boxing). Here the first occurrence of 3 will be removed
+		System.out.println(numbers);
+		
+		// Here as the shifting of all the elements present after the deleted element is involved the time complexity is O(N).
+		// And as no extra space proportional to the number of element in ArrayList is required hence space complexity is O(1)
 	}
-	
-	// In all of the above approaches arrayList traversal is involved hence the time complexity is O(N).
-	// While no additional memory is required in proportion with the number of elements hence space complexity is O(1).  
-
 }
